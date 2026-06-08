@@ -27,8 +27,6 @@ jobs:
         run: chmod +x gradlew
       - name: Run SUT (System Under Test)
         run: java -jar ./artifacts/app-order.jar &
-      - name: Wait for application to be ready
-        run: sleep 5
       - name: Run tests with Gradle
         run: ./gradlew test
 
